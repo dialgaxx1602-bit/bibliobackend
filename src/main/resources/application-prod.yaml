@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+
+springdoc:
+  api-docs:
+    enabled: false
+  swagger-ui:
+    enabled: false
+
+app:
+  cors:
+    allowed-origins: ${FRONTEND_ORIGINS}
+
+logging:
+  level:
+    root: WARN
+    pe.edu.upeu.BiblioBackend: INFO
+    org.hibernate.SQL: WARN
